@@ -37,7 +37,6 @@
     - **One-to-Many** relationship from Shopping Carts to Cart Items.
 
 6. **Users to Orders**:
-
     - **done**
     - **One User** can have **many Orders**.
     - **One-to-Many** relationship from Users to Orders.
@@ -54,25 +53,31 @@
 
 9. **Wishlists to Wishlist Items**:
 
+    - **done**
     - **One Wishlist** can have **many Wishlist Items**.
     - **One-to-Many** relationship from Wishlists to Wishlist Items.
 
 10. **Watches to Reviews**:
 
+    - **done**
     - **One Watch** can have **many Reviews**.
     - **One-to-Many** relationship from Watches to Reviews.
 
 11. **Users to Reviews**:
 
+    - **done**
     - **One User** can have **many Reviews**.
     - **One-to-Many** relationship from Users to Reviews.
 
 12. **Users to Support Tickets**:
 
+    - **done**
     - **One User** can have **many Support Tickets**.
     - **One-to-Many** relationship from Users to Support Tickets.
 
 13. **Users to Feedback**:
+
+    - **done**
     - **One User** can have **many Feedback Entries**.
     - **One-to-Many** relationship from Users to Feedback.
 
@@ -80,50 +85,61 @@
 
 1. **User Profiles to Users**:
 
+    - **done**
     - **One User Profile** belongs to **one User**.
     - **One-to-One** relationship from User Profiles to User.
 
 2. **Watches to Categories**:
 
+    - **done**
     - **Many Watches** belong to **one Category**.
     - **Many-to-One** relationship from Watches to Categories.
 
 3. **Images to Watches**:
 
+    - **done**
     - **Many Images** belong to **one Watch**.
     - **Many-to-One** relationship from Images to Watches.
 
 4. **Cart Items to Shopping Carts**:
 
+    - **done**
     - **Many Cart Items** belong to **one Shopping Cart**.
     - **Many-to-One** relationship from Cart Items to Shopping Carts.
 
 5. **Order Items to Orders**:
 
+    - **done**
     - **Many Order Items** belong to **one Order**.
     - **Many-to-One** relationship from Order Items to Orders.
 
 6. **Wishlist Items to Wishlists**:
 
+    - **done**
     - **Many Wishlist Items** belong to **one Wishlist**.
     - **Many-to-One** relationship from Wishlist Items to Wishlists.
 
 7. **Reviews to Watches**:
 
+    - **done**
     - **Many Reviews** belong to **one Watch**.
     - **Many-to-One** relationship from Reviews to Watches.
 
 8. **Reviews to Users**:
 
+    - **done**
     - **Many Reviews** belong to **one User**.
     - **Many-to-One** relationship from Reviews to Users.
 
 9. **Support Tickets to Users**:
 
+    - **done**
     - **Many Support Tickets** belong to **one User**.
     - **Many-to-One** relationship from Support Tickets to Users.
 
 10. **Feedback to Users**:
+
+    - **done**
     - **Many Feedback Entries** belong to **one User**.
     - **Many-to-One** relationship from Feedback to Users.
 

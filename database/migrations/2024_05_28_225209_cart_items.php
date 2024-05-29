@@ -13,7 +13,14 @@ return new class extends Migration
     {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('cart_id');
+            $table->unsignedBigInteger('watch_id');
+            $table->decimal('price', 10, 2);
+            $table->integer('quantity');
             $table->timestamps();
+
+            $table->foreign('cart_id')->references('id')->on('shopping_carts');
+            $table->foreign('watch_id')->references('id')->on('watches');
         });
     }
 

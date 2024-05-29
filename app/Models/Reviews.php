@@ -8,4 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Reviews extends Model
 {
     use HasFactory;
+
+    public function watch()
+    {
+        return $this->belongsTo(Watches::class);
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+
 }

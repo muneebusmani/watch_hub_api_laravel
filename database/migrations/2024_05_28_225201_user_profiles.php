@@ -13,7 +13,17 @@ return new class extends Migration
     {
         Schema::create('user_profiles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip_code');
+            $table->string('phone_number');
+            $table->timestamp('created_at');
+            $table->timestamp('updated_at');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

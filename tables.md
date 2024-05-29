@@ -4,7 +4,7 @@
     - `username`: Unique username
     - `email`: Unique email
     - `password_hash`: Encrypted password
-    - `created_at`: Timestamp of account creation
+    - `created_at`: Timestamp of account creation   
     - `updated_at`: Timestamp of last update
 
 2. **User Profiles**
@@ -35,24 +35,24 @@
 
 4. **Categories**
 
-    - `id`: Primary key
-    - `name`: Category name (e.g., Luxury, Sports)
-    - `description`: Description of the category
+- `id`: Primary key
+- `name`: Category name (e.g., Luxury, Sports)
+- `description`: Description of the category
 
 5. **Images**
 
-    - `id`: Primary key
-    - `watch_id`: Foreign key to Watches table
-    - `image_url`: URL of the image
-    - `created_at`: Timestamp of image addition
-    - `updated_at`: Timestamp of last update
+- `id`: Primary key
+- `watch_id`: Foreign key to Watches table
+- `image_url`: URL of the image
+- `created_at`: Timestamp of image addition
+- `updated_at`: Timestamp of last update
 
 6. **Shopping Cart**
 
-    - `id`: Primary key
-    - `user_id`: Foreign key to Users table
-    - `created_at`: Timestamp of item addition
-    - `updated_at`: Timestamp of last update
+- `id`: Primary key
+- `user_id`: Foreign key to Users table
+- `created_at`: Timestamp of item addition
+- `updated_at`: Timestamp of last update
       <!--
           We can link user and shopping cart   together via inner join
           join User account and shopping cart on the basis of id in user table and user_id foreign key in Shopping cart
@@ -93,12 +93,15 @@
 
     - `id`: Primary key
     - `user_id`: Foreign key to Users table
-    - `watch_id`: Foreign key to Watches table
-    - `price`: Price
-    - `stock`: Stock availability
     - `created_at`: Timestamp of item addition
     - `updated_at`: Timestamp of last update
 
+10. **Wishlist Item**
+    - `id`: Primary key
+    - `wishlist_id`: Foreign key to Users table
+    - `watch_id`: Foreign key to Watches table
+    - `created_at`: Timestamp of item addition
+    - `updated_at`: Timestamp of last update
 11. **Reviews**
 
     - `id`: Primary key

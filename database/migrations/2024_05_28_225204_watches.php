@@ -13,7 +13,15 @@ return new class extends Migration
     {
         Schema::create('watches', function (Blueprint $table) {
             $table->id();
+            $table->string('brand');
+            $table->string('model');
+            $table->longText('description');
+            $table->decimal('price', 10, 2);
+            $table->integer('stock');
+            $table->unsignedBigInteger('category_id');
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories');
         });
     }
 
