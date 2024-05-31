@@ -11,8 +11,8 @@ use Illuminate\Support\Facades\Hash;
  */
 class UserFactory extends Factory
 {
-    /** @psalm-suppress MissingPropertyType */
-    protected  $model = User::class;
+    /** @psalm-suppress missingpropertytype */
+    protected $model = User::class;
 
     /**
      * Define the model's default state.
@@ -25,7 +25,7 @@ class UserFactory extends Factory
             'username' => $this->faker->userName,
             'email' => $this->faker->unique()->safeEmail,
             // 'password' => bcrypt('password'), // you can use Hash::make() if you prefer
-            'password' => Hash::make('password'), // you can use Hash::make() if you prefer
+            'password' => Hash::make('password'),  // you can use Hash::make() if you prefer
             'created_at' => now(),
             'updated_at' => now(),
         ];

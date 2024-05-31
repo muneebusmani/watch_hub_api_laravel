@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\Wishlist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class WishlistFactory extends Factory
 {
+    /** @psalm-suppress missingpropertytype */
+    protected $model = Wishlist::class;
+
     /**
      * Define the model's default state.
      *

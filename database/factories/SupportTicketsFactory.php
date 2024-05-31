@@ -10,6 +10,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class SupportTicketsFactory extends Factory
 {
+    /** @psalm-suppress missingpropertytype */
+    protected $model = SupportTicketsFactory::class;
+
     /**
      * Define the model's default state.
      *

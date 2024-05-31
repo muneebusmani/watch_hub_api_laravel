@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class UserProfileFactory extends Factory
 {
+    /** @psalm-suppress missingpropertytype */
+    protected $model = UserProfile::class;
+
     /**
      * Define the model's default state.
      *

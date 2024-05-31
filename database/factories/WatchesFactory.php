@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Categories;
+use App\Models\Watches;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -10,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class WatchesFactory extends Factory
 {
+    /** @psalm-suppress missingpropertytype */
+    protected $model = Watches::class;
+
     /**
      * Define the model's default state.
      *
@@ -18,14 +22,14 @@ class WatchesFactory extends Factory
     public function definition(): array
     {
         return [
-            'brand'       => $this->faker->company,
-            'model'       => $this->faker->word,
+            'brand' => $this->faker->company,
+            'model' => $this->faker->word,
             'description' => $this->faker->paragraph,
-            'price'       => $this->faker->randomFloat(2, 50, 1000),
-            'stock'       => $this->faker->numberBetween(1, 100),
+            'price' => $this->faker->randomFloat(2, 50, 1000),
+            'stock' => $this->faker->numberBetween(1, 100),
             'category_id' => Categories::factory(),
-            'created_at'  => now(),
-            'updated_at'  => now(),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
