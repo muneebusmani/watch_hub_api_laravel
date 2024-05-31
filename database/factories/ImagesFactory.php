@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Images;
 use App\Models\Watches;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -10,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class ImagesFactory extends Factory
 {
+    /** @psalm-suppress missingpropertytype */
+    protected $model = Images::class;
+
     /**
      * Define the model's default state.
      *

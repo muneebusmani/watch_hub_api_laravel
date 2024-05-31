@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Feedback;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -10,6 +11,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class FeedbackFactory extends Factory
 {
+    /** @psalm-suppress MissingPropertyType */
+    protected $model = Feedback::class;
+
     /**
      * Define the model's default state.
      *

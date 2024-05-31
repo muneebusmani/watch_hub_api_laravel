@@ -2,9 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\CartItems;
 use App\Models\ShoppingCart;
 use App\Models\Watches;
-use App\Models\CartItems;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -13,11 +13,11 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 class CartItemsFactory extends Factory
 {
     /** @psalm-suppress MissingPropertyType */
-    protected $model = Watches::class;
+    protected $model = CartItems::class;
 
     /**
      * Define the model's default state.
-
+     *
      * @return array<string, mixed>
      */
     public function definition(): array
