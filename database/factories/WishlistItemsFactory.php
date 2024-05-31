@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Watches;
+use App\Models\Wishlist;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,10 @@ class WishlistItemsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'wishlist_id' => Wishlist::factory(),
+            'watch_id' => Watches::factory(),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

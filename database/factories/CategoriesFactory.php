@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Categories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CategoriesFactory extends Factory
 {
+    /** @psalm-suppress MissingPropertyType */
+    protected $model = Categories::class;
+
     /**
      * Define the model's default state.
      *
@@ -17,7 +21,10 @@ class CategoriesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => $this->faker->word,
+            'description' => $this->faker->paragraph,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

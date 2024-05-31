@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Watches;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class ImagesFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'watch_id' => Watches::factory(),
+            'image_url' => $this->faker->imageUrl,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

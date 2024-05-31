@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,12 @@ class SupportTicketsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'subject' => $this->faker->sentence,
+            'message' => $this->faker->paragraph,
+            'status' => $this->faker->randomElement(['open', 'closed']),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

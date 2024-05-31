@@ -17,7 +17,10 @@ class FAQFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'question' => $this->faker->sentence,
+            'answer' => $this->faker->paragraph,
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }

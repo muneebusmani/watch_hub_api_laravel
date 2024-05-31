@@ -12,15 +12,12 @@
         <directory name="app" />
         <directory name="database/factories" />
         <directory name="database/seeders" />
+        <directory name="routes" />
+        <directory name="config" />
         <ignoreFiles>
-            <directory name="config" />
-            <directory name="bootstrap" />
             <directory name="vendor" />
-            <directory name="tests" />
-            <directory name="public" />
-            <directory name="resources" />
-            <directory name="routes" />
             <directory name="storage" />
+            <directory name="tests" />
         </ignoreFiles>
     </projectFiles>
 </psalm>

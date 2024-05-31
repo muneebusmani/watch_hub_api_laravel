@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use App\Models\Watches;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,11 @@ class ReviewsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'watch_id' => Watches::factory(),
+            'rating' => $this->faker->numberBetween(1, 5),
+            'created_at' => now(),
+            'updated_at' => now(),
         ];
     }
 }
