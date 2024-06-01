@@ -14,10 +14,11 @@
         <directory name="database/seeders" />
         <directory name="routes" />
         <directory name="config" />
-        <ignoreFiles>
-            <directory name="vendor" />
-            <directory name="storage" />
-            <directory name="tests" />
-        </ignoreFiles>
+        <directory name="config" />
+        <!-- <directory name="vendor" /> -->
+        <!-- <ignoreFiles> -->
+        <!--     <directory name="storage" /> -->
+        <!--     <directory name="tests" /> -->
+        <!-- </ignoreFiles> -->
     </projectFiles>
 </psalm>
