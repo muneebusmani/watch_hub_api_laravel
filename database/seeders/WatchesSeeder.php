@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Watches;
 use Illuminate\Database\Seeder;
 
 class WatchesSeeder extends Seeder
@@ -12,6 +12,6 @@ class WatchesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Watches::factory()->count(20)->create();
     }
 }

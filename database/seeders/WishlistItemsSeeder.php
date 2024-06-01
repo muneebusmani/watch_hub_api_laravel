@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\WishlistItems;
 use Illuminate\Database\Seeder;
 
 class WishlistItemsSeeder extends Seeder
@@ -12,6 +12,6 @@ class WishlistItemsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        WishlistItems::factory()->count(20)->create();
     }
 }

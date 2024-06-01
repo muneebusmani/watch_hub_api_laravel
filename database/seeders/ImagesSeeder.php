@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Images;
 use Illuminate\Database\Seeder;
 
 class ImagesSeeder extends Seeder
@@ -12,6 +12,6 @@ class ImagesSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        Images::factory()->count(40)->create();
     }
 }

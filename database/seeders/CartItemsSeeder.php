@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\CartItems;
 use Illuminate\Database\Seeder;
 
 class CartItemsSeeder extends Seeder
@@ -12,6 +12,6 @@ class CartItemsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        CartItems::factory()->count(30)->create();
     }
 }

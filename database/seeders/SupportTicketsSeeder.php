@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\SupportTickets;
 use Illuminate\Database\Seeder;
 
 class SupportTicketsSeeder extends Seeder
@@ -12,6 +12,6 @@ class SupportTicketsSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        SupportTickets::factory()->count(10)->create();
     }
 }
