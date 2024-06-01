@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreShoppingCartRequest;
-use App\Http\Requests\UpdateShoppingCartRequest;
-use App\Models\ShoppingCart;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreImagesRequest;
+use App\Http\Requests\UpdateImagesRequest;
+use App\Models\Images;
 
-class ShoppingCartController extends Controller
+class ImagesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class ShoppingCartController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreShoppingCartRequest $request)
+    public function store(StoreImagesRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class ShoppingCartController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ShoppingCart $shoppingCart)
+    public function show(Images $images)
     {
         //
     }
@@ -43,7 +44,7 @@ class ShoppingCartController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ShoppingCart $shoppingCart)
+    public function edit(Images $images)
     {
         //
     }
@@ -51,7 +52,7 @@ class ShoppingCartController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateShoppingCartRequest $request, ShoppingCart $shoppingCart)
+    public function update(UpdateImagesRequest $request, Images $images)
     {
         //
     }
@@ -59,7 +60,7 @@ class ShoppingCartController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ShoppingCart $shoppingCart)
+    public function destroy(Images $images)
     {
         //
     }

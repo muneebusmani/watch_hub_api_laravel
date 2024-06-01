@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreWishlistItemsRequest;
-use App\Http\Requests\UpdateWishlistItemsRequest;
-use App\Models\WishlistItems;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreSupportTicketsRequest;
+use App\Http\Requests\UpdateSupportTicketsRequest;
+use App\Models\SupportTickets;
 
-class WishlistItemsController extends Controller
+class SupportTicketsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class WishlistItemsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreWishlistItemsRequest $request)
+    public function store(StoreSupportTicketsRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class WishlistItemsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(WishlistItems $wishlistItems)
+    public function show(SupportTickets $supportTickets)
     {
         //
     }
@@ -43,7 +44,7 @@ class WishlistItemsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(WishlistItems $wishlistItems)
+    public function edit(SupportTickets $supportTickets)
     {
         //
     }
@@ -51,7 +52,7 @@ class WishlistItemsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateWishlistItemsRequest $request, WishlistItems $wishlistItems)
+    public function update(UpdateSupportTicketsRequest $request, SupportTickets $supportTickets)
     {
         //
     }
@@ -59,7 +60,7 @@ class WishlistItemsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(WishlistItems $wishlistItems)
+    public function destroy(SupportTickets $supportTickets)
     {
         //
     }

@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreFeedbackRequest;
-use App\Http\Requests\UpdateFeedbackRequest;
-use App\Models\Feedback;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreWatchesRequest;
+use App\Http\Requests\UpdateWatchesRequest;
+use App\Models\Watches;
 
-class FeedbackController extends Controller
+class WatchesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class FeedbackController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreFeedbackRequest $request)
+    public function store(StoreWatchesRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class FeedbackController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Feedback $feedback)
+    public function show(Watches $watches)
     {
         //
     }
@@ -43,7 +44,7 @@ class FeedbackController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Feedback $feedback)
+    public function edit(Watches $watches)
     {
         //
     }
@@ -51,7 +52,7 @@ class FeedbackController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateFeedbackRequest $request, Feedback $feedback)
+    public function update(UpdateWatchesRequest $request, Watches $watches)
     {
         //
     }
@@ -59,7 +60,7 @@ class FeedbackController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Feedback $feedback)
+    public function destroy(Watches $watches)
     {
         //
     }

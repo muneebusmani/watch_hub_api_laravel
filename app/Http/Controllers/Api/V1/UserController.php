@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreUserProfileRequest;
-use App\Http\Requests\UpdateUserProfileRequest;
-use App\Models\UserProfile;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
+use App\Models\User;
 
-class UserProfileController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return User::all();
     }
 
     /**
@@ -27,7 +28,7 @@ class UserProfileController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreUserProfileRequest $request)
+    public function store(StoreUserRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class UserProfileController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(UserProfile $userProfile)
+    public function show(User $user)
     {
         //
     }
@@ -43,7 +44,7 @@ class UserProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(UserProfile $userProfile)
+    public function edit(User $user)
     {
         //
     }
@@ -51,7 +52,7 @@ class UserProfileController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateUserProfileRequest $request, UserProfile $userProfile)
+    public function update(UpdateUserRequest $request, User $user)
     {
         //
     }
@@ -59,7 +60,7 @@ class UserProfileController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(UserProfile $userProfile)
+    public function destroy(User $user)
     {
         //
     }

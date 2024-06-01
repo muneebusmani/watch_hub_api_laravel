@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreWatchesRequest;
-use App\Http\Requests\UpdateWatchesRequest;
-use App\Models\Watches;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreUserProfileRequest;
+use App\Http\Requests\UpdateUserProfileRequest;
+use App\Models\UserProfile;
 
-class WatchesController extends Controller
+class UserProfileController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return UserProfile::all();
     }
 
     /**
@@ -27,7 +28,7 @@ class WatchesController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreWatchesRequest $request)
+    public function store(StoreUserProfileRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class WatchesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Watches $watches)
+    public function show(UserProfile $userProfile)
     {
         //
     }
@@ -43,7 +44,7 @@ class WatchesController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Watches $watches)
+    public function edit(UserProfile $userProfile)
     {
         //
     }
@@ -51,7 +52,7 @@ class WatchesController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateWatchesRequest $request, Watches $watches)
+    public function update(UpdateUserProfileRequest $request, UserProfile $userProfile)
     {
         //
     }
@@ -59,7 +60,7 @@ class WatchesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Watches $watches)
+    public function destroy(UserProfile $userProfile)
     {
         //
     }

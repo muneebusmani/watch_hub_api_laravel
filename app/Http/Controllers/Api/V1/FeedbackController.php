@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreSupportTicketsRequest;
-use App\Http\Requests\UpdateSupportTicketsRequest;
-use App\Models\SupportTickets;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreFeedbackRequest;
+use App\Http\Requests\UpdateFeedbackRequest;
+use App\Models\Feedback;
 
-class SupportTicketsController extends Controller
+class FeedbackController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class SupportTicketsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreSupportTicketsRequest $request)
+    public function store(StoreFeedbackRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class SupportTicketsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(SupportTickets $supportTickets)
+    public function show(Feedback $feedback)
     {
         //
     }
@@ -43,7 +44,7 @@ class SupportTicketsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(SupportTickets $supportTickets)
+    public function edit(Feedback $feedback)
     {
         //
     }
@@ -51,7 +52,7 @@ class SupportTicketsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateSupportTicketsRequest $request, SupportTickets $supportTickets)
+    public function update(UpdateFeedbackRequest $request, Feedback $feedback)
     {
         //
     }
@@ -59,7 +60,7 @@ class SupportTicketsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(SupportTickets $supportTickets)
+    public function destroy(Feedback $feedback)
     {
         //
     }

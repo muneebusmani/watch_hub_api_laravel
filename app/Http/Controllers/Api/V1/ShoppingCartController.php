@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Requests\StoreReviewsRequest;
-use App\Http\Requests\UpdateReviewsRequest;
-use App\Models\Reviews;
+use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreShoppingCartRequest;
+use App\Http\Requests\UpdateShoppingCartRequest;
+use App\Models\ShoppingCart;
 
-class ReviewsController extends Controller
+class ShoppingCartController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +28,7 @@ class ReviewsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreReviewsRequest $request)
+    public function store(StoreShoppingCartRequest $request)
     {
         //
     }
@@ -35,7 +36,7 @@ class ReviewsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Reviews $reviews)
+    public function show(ShoppingCart $shoppingCart)
     {
         //
     }
@@ -43,7 +44,7 @@ class ReviewsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Reviews $reviews)
+    public function edit(ShoppingCart $shoppingCart)
     {
         //
     }
@@ -51,7 +52,7 @@ class ReviewsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateReviewsRequest $request, Reviews $reviews)
+    public function update(UpdateShoppingCartRequest $request, ShoppingCart $shoppingCart)
     {
         //
     }
@@ -59,7 +60,7 @@ class ReviewsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Reviews $reviews)
+    public function destroy(ShoppingCart $shoppingCart)
     {
         //
     }
