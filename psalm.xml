@@ -14,7 +14,6 @@
         <directory name="database/seeders" />
         <directory name="routes" />
         <directory name="config" />
-        <directory name="config" />
         <!-- <directory name="vendor" /> -->
         <!-- <ignoreFiles> -->
         <!--     <directory name="storage" /> -->
