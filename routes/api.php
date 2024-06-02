@@ -17,6 +17,7 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('/cart_items', CartItemsController::class);
     Route::apiResource('/wishlists', WishlistController::class);
     Route::apiResource('/wishlist_items', WishlistItemsController::class);
+    // http http://localhost/api/v1/{routename}
 });
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
