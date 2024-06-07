@@ -11,7 +11,7 @@ class StoreCartItemsRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,10 @@ class StoreCartItemsRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'cart_id' => 'required|integer|max:255',
+            'watch_id' => 'required|integer|max:255',
+            'price' => 'required|integer',
+            'quantity' => 'required|integer|max:255',
         ];
     }
 }

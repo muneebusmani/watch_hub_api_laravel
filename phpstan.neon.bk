@@ -15,7 +15,12 @@ parameters:
 #    ignoreErrors:
 #        - '#PHPDoc tag @var#'
 #
-#    excludePaths:
+    excludePaths:
 #        - ./*/*/FileToBeExcluded.php
+        - ./vendor
+        - ./storage
+        - ./tests
+        - ./public
+        - ./config
 #
 #    checkMissingIterableValueType: false
