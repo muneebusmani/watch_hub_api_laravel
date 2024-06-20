@@ -9,8 +9,8 @@ use App\Http\Resources\CartItemsResource;
 use App\Models\CartItems;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\JsonResponse as IlluminateJsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\JsonResponse as IlluminateJsonResponse;
 
 class CartItemsController extends Controller
 {
@@ -37,10 +37,10 @@ class CartItemsController extends Controller
      *
      * @return Model|Collection|CartItems|static[]
      */
-    public function show(int $id):IlluminateJsonResponse
+    public function show(int $id): IlluminateJsonResponse
     {
         // Find the entry by ID
-        $entry = CartItems::find($id);
+        $entry = CartItems::with('user_id')->find($id);
 
         // Check if the entry exists
         if (!$entry) {
@@ -56,7 +56,6 @@ class CartItemsController extends Controller
      */
     public function edit(CartItems $cartItems): void
     {
-
         //
     }
 
