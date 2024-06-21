@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class CartItemsFactory extends Factory
 {
-    /** @psalm-suppress MissingPropertyType */
     protected $model = CartItems::class;
 
     /**

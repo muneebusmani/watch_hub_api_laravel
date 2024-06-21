@@ -52,4 +52,10 @@ class CartItems extends Model
     {
         return $this->belongsTo(Watches::class);
     }
+    /*
+        The CartItems class is a Laravel Eloquent model representing an item in a shopping cart.
+        It uses the HasFactory trait for model factories and defines mass-assignable attributes with $fillable.
+        It has two relationships: it belongs to a ShoppingCart via the cart method and belongs to a Watches model
+        via the product method.
+    */
 }
