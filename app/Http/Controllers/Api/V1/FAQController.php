@@ -36,9 +36,18 @@ class FAQController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(FAQ $fAQ)
+    public function show(int $id)
     {
-        //
+        // Find the entry by ID
+        $entry = FAQ::find($id);
+
+        // Check if the entry exists
+        if (!$entry) {
+            return response()->json(['message' => 'Entry not found'], 404);
+        }
+
+        // Return the entry as JSON
+        return response()->json($entry);
     }
 
     /**

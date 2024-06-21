@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -12,9 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $user_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\CartItems> $items
- * @property-read int|null $items_count
- * @property-read \App\Models\CartItems $user
+ * @property-read \App\Models\User $user
  * @method static \Database\Factories\ShoppingCartFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|ShoppingCart newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|ShoppingCart newQuery()
@@ -29,13 +28,8 @@ class ShoppingCart extends Model
 {
     use HasFactory;
 
-    public function items()
+    public function user(): BelongsTo
     {
-        return $this->hasMany(CartItems::class);
-    }
-
-    public function user()
-    {
-        return $this->belongsTo(CartItems::class);
+        return $this->belongsTo(User::class);
     }
 }

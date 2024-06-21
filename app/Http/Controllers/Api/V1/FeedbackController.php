@@ -36,9 +36,18 @@ class FeedbackController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Feedback $feedback)
+    public function show(int $id)
     {
-        //
+        // Find the entry by ID
+        $entry = Feedback::find($id);
+
+        // Check if the entry exists
+        if (!$entry) {
+            return response()->json(['message' => 'Entry not found'], 404);
+        }
+
+        // Return the entry as JSON
+        return response()->json($entry);
     }
 
     /**

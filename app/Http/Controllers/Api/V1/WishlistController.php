@@ -36,9 +36,18 @@ class WishlistController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Wishlist $wishlist)
+    public function show(int $id)
     {
-        //
+        // Find the entry by ID
+        $entry = Wishlist::find($id);
+
+        // Check if the entry exists
+        if (!$entry) {
+            return response()->json(['message' => 'Entry not found'], 404);
+        }
+
+        // Return the entry as JSON
+        return response()->json($entry);
     }
 
     /**

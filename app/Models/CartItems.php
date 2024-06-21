@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 /**
- * 
+ *
  *
  * @property int $id
  * @property int $cart_id
@@ -34,13 +33,29 @@ class CartItems extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'cart_id',
+        'watch_id',
+        'price',
+        'quantity',
+        'cart',
+        'product'
+    ];
+
     public function cart()
     {
         return $this->belongsTo(ShoppingCart::class);
     }
 
     public function product()
+
     {
         return $this->belongsTo(Watches::class);
     }
+    /*
+        The CartItems class is a Laravel Eloquent model representing an item in a shopping cart.
+        It uses the HasFactory trait for model factories and defines mass-assignable attributes with $fillable.
+        It has two relationships: it belongs to a ShoppingCart via the cart method and belongs to a Watches model
+        via the product method.
+    */
 }

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property string $name
@@ -30,6 +30,14 @@ class Categories extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'cart_id',
+        'watch_id',
+        'price',
+        'quantity',
+        'cart',
+        'product'
+    ];
     public function watches()
     {
         return $this->hasMany(Watches::class);
